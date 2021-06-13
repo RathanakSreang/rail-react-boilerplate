@@ -3,6 +3,20 @@
 ### Rails API-React boilerplate with contain ready to use authorization.
 
 
+### Start Rails
+Create postgress database.
+
+```sh
+bundle install
+rails db:drop db:create db:migrate db:seed
+rails s
+```
+### Start React
+```sh
+cd frontend
+yarn
+yarn start
+```
 
 ### API doc
 Generate API Doc

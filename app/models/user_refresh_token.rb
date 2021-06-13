@@ -4,6 +4,7 @@ class UserRefreshToken < ApplicationRecord
   before_create :generate_token
   before_create :set_expires_at
 
+  default_scope {where("expires_at IS NULL or expires_at > '#{Time.now}'")}
 
   def generate_token
     self.refresh_token = loop do
@@ -13,6 +14,8 @@ class UserRefreshToken < ApplicationRecord
   end
 
   def set_expires_at
-    self.expires_at = Time.now + 60.days
+    unless self.expires_at
+      self.expires_at = Time.now + 60.days
+    end
   end
 end

@@ -9,7 +9,7 @@ class AuthController < ApplicationController
         auth: user.generate_auth(request_uuid)
       }
     else
-      render json: {error: "Invalid username or password"}
+      render json: {errors: "Invalid email or password."}, status: :bad_request
     end
   end
 
@@ -22,7 +22,7 @@ class AuthController < ApplicationController
         auth: user.generate_auth(request_uuid)
       }
     else
-      render json: {error: "Invalid email or password."}, status: :unprocessable_entity
+      render json: {errors: "Invalid email or password."}, status: :unprocessable_entity
     end
   end
 
@@ -35,7 +35,7 @@ class AuthController < ApplicationController
         auth: user.generate_auth(request_uuid)
       }
     else
-      render json: {error: "refresh_token_fail."}, status: :unprocessable_entity
+      render json: {errors: "refresh_token_fail."}, status: :unprocessable_entity
     end
   end
 

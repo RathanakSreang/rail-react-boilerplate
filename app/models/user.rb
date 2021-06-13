@@ -2,8 +2,8 @@ class User < ApplicationRecord
   enum plan: [:free, :standard, :organization]
   has_many :user_refresh_tokens, dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 100 }
-  validates :email, presence: true, 'valid_email_2/email': true
+  validates :name, presence: true, length: { maximum: 80 }
+  validates :email, presence: true, 'valid_email_2/email': true, length: { maximum: 255 }
   validates_uniqueness_of :email
   validates :password, length: {minimum: 8, maximum: 120}, on: :update, allow_blank: true
   has_secure_password
