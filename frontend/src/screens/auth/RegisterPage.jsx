@@ -40,7 +40,7 @@ const RegisterPage = () => {
   }
   return(
     <Container>
-      <p className="login-card-description">បង្កើតក្នុងគណនីរបស់អ្នក</p>
+      <p className="login-card-description">Create your new account</p>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
         validationSchema={AuthSchema}
@@ -88,7 +88,7 @@ const RegisterPage = () => {
             </div>
 
             <button type="submit" disabled={isSubmitting} className="btn btn-block login-btn mb-4 w-100">
-               បង្តើត
+               Create
              </button>
           </Form>
        )}

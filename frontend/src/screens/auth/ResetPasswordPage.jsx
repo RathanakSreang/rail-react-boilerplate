@@ -73,7 +73,7 @@ const ResetPasswordPage = () => {
           </Form>
        )}
       </Formik>
-      <p className="login-card-footer-text mb-0">ត្រលប់ទៅ
+      <p className="login-card-footer-text mb-0">Back
         <Link to='/signin' className="register-link"> Sign In!</Link>
       </p>
     </Container>

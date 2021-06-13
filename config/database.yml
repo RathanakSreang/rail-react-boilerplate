@@ -24,17 +24,17 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV['DATABASE_USERNAME'] || "khmerlang_app" %>
+  username: <%= ENV['DATABASE_USERNAME'] || "demo_rail_app" %>
   password: <%= ENV['DATABASE_PASSWORD'] || "RathanakPassword" %>
 
 development:
   <<: *default
-  database: khmerlang_app_development
+  database: demo_rail_app_development
 test:
   <<: *default
-  database: khmerlang_app_test
+  database: demo_rail_app_test
 production:
   <<: *default
-  database: khmerlang_app_production
-  username: khmerlang_app
-  password: <%= ENV['KHMERLANG_APP_DATABASE_PASSWORD'] %>
+  database: demo_rail_app_production
+  username: demo_rail_app
+  password: <%= ENV['demo_rail_APP_DATABASE_PASSWORD'] %>

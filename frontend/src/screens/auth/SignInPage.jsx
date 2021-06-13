@@ -40,7 +40,7 @@ const SignInPage = () => {
 
   return(
     <Container>
-      <p className="login-card-description">ចូលទៅក្នុងគណនីរបស់អ្នក</p>
+      <p className="login-card-description">Signin to your account</p>
       <Formik
        initialValues={{ email: '', password: '' }}
        validationSchema={AuthSchema}
@@ -84,12 +84,12 @@ const SignInPage = () => {
             </div>
 
             <button type="submit" disabled={isSubmitting} className="btn btn-block login-btn mb-4 w-100">
-               ចូល
+               Signin
              </button>
           </Form>
        )}
       </Formik>
-      <Link to='/forgot-password' className="forgot-password-link">ភ្លេច​លេខសំងាត់​?</Link>
+      <Link to='/forgot-password' className="forgot-password-link">Forget your password?</Link>
       <p className="login-card-footer-text mb-0">
         Not have account? <Link to='/register' className="register-link"> Create new!</Link>
       </p>

@@ -32,7 +32,7 @@ const  ForgotPasswordPage = () => {
 
   return (
     <Container>
-      <p className="login-card-description">ភ្លេចលេខសម្ងាត់របស់អ្នក?</p>
+      <p className="login-card-description">Forgot your password?</p>
       <Formik
        initialValues={{ email: '' }}
        validate={values => {
@@ -70,12 +70,12 @@ const  ForgotPasswordPage = () => {
               <ErrorMessage name="email" component="div" className="text-danger" />
             </div>
             <button type="submit" disabled={isSubmitting} className="btn btn-block login-btn mb-4 w-100">
-               ផ្ញើពាក្យសម្ងាត់កំណត់ឡើងវិញ
+               Send reset password instruction
              </button>
           </Form>
        )}
       </Formik>
-      <p className="login-card-footer-text mb-0">ត្រលប់ទៅ
+      <p className="login-card-footer-text mb-0">Back
         <Link to='/signin' className="register-link"> Sign In!</Link>
       </p>
     </Container>
