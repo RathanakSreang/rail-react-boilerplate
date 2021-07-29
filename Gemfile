@@ -37,6 +37,7 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "faker"
   gem "letter_opener"
+  gem "guard-rspec", "~> 4.7"
 end
 
 group :test do
